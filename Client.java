@@ -43,6 +43,9 @@ public class Client {
 
                         System.out.println("Your Reply: ");
                         String chatReply= sc.nextLine();
+                        if(chatReply.equals("")){
+                            chatReply = sc.nextLine();
+                        }
                         if("Quit".equals(chatReply) || "quit".equals(chatReply)){
                             dos.writeUTF("Bye Bye Server");
                             condition=false;
